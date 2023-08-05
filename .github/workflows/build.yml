@@ -20,5 +20,7 @@ jobs:
           gitbook install ./src
       - run:
           gitbook build ./src --output=. ./docs
+      - run:
+          echo "howtowincptc.com" > ./docs/CNAME
       - name: Build
         uses: bob1113/gitbook-publish@v1.0.0
