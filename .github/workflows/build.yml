@@ -19,6 +19,6 @@ jobs:
       - run:
           gitbook install ./src
       - run:
-          gitbook build ./src output=. ./docs
+          gitbook build ./src --output=. ./docs
       - name: Build
         uses: bob1113/gitbook-publish@v1.0.0
