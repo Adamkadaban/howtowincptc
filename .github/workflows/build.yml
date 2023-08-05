@@ -1,0 +1,26 @@
+name: 'gitbook-publish'
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    env:
+      USER_NAME : adamkadaban
+      USER_EMAIL: adamkadaban@gmail.com
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '10.22.0'
+      - run:
+          npm install gitbook-cli -g
+      - run:
+          gitbook init
+      - run:
+          gitbook install ./src
+      - run:
+          gitbook build ./src output=. ./docs
+      - name: Build
+        uses: bob1113/gitbook-publish@v1.0.0
