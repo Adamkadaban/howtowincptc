@@ -22,6 +22,8 @@ I've almost entirely based this section on the [BHIS Pentest Reporting course by
 - You want to include what attacks did not work in a report.
 	- That way, the company you're testing knows what you didn't test (what needs further testing) and they know what they're doing well.
 
+- Do not say "includes but is not limited to" or similar. Make sure that your lists, especially when detailing vulns and inventory, are complete. 
+
 ### Report Elements
 
 - Include evidence of **all** findings
@@ -77,5 +79,4 @@ I've almost entirely based this section on the [BHIS Pentest Reporting course by
 
 - Tools like [PlexTrac](https://plextrac.com/) can make reporting, especially when collaborative, much easier, but are very expensive.
 	- [pwndoc](https://github.com/pwndoc/pwndoc) is a great open-source alternative that works similarly to generate a word document based on findings. 
-
 
