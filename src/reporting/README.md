@@ -1,5 +1,7 @@
 # Reporting
 
+Before and after figuring out what you want in your report, I highly recommend looking at [these](https://github.com/juliocesarfort/public-pentesting-reports) public reports to get inspiration for formatting and findings.
+
 ## How to Write a Good Report
 
 This section will cover general reporting tips that will help you write an outstanding report.
