@@ -80,3 +80,72 @@ I've almost entirely based this section on the [BHIS Pentest Reporting course by
 - Tools like [PlexTrac](https://plextrac.com/) can make reporting, especially when collaborative, much easier, but are very expensive.
 	- [pwndoc](https://github.com/pwndoc/pwndoc) is a great open-source alternative that works similarly to generate a word document based on findings. 
 
+## How to Write a Good Report for CPTC
+
+Writing a good report for CPTC should be about the same as writing a general report.
+
+However, Dan Borges (Scoring), has written several blogs on what he believes to be critical in a pentest, which especially motivated teams may want to know to have a slight leg up on the other competition.
+
+Thus, the majority of this section will be based on various posts on [Dan Borges' Blog](http://lockboxx.blogspot.com/)
+
+### Things to Do
+
+- Clear TOC
+- Executive Summary
+	- Scope
+		- Include a network topology below the scope
+	- Overall Risk Summary
+	- Summary of major Issues
+	- Brief Narrative of test
+	- High level remediation advice
+		- Provide short and long-term advice
+	- Successful security controls
+		- Optional, but shows the client they're doing some things right
+	- Compliance findings and guidance
+		- If there is an MOU or SLA, describe if they are met as per the environment. 
+	- Methodologies, approaches, risk rating systems
+		- Probably makes more sense in the appendix
+		- This shows that there are standards being used. PTES is good bc it's standardized
+		- Include a diagram of the methodology
+
+- Technical Findings
+	- Graphical summaries of findings at the top
+		- Pie chart of vulns by criticality and category
+	- Include the vuln, the systems vulnerable, the impact on the company, overall risk, detailed steps to test the vuln, suggested remediation, and links that may be useful
+		- Risk: low, medium, high, critical, informational
+			- Use CVSS
+		- Scope: Items and systems impacted. 
+			- Can include assets, apps, paths in an app, systems in a process, services...
+		- Description: Describe the vuln fully
+			- Reference known CVEs and vulns
+			- It can be useful to have pre-written vuln descriptions
+		- Impact: Impact on the client in this environment specifically
+		- Likelihood: Change of an attack
+			- Optional
+			- Include elements of cvss score, complexity of attack, if there are available tools to make the attack easy
+			- This can be part of impact
+		- Steps to test: How the reader can verify the vuln
+			- Include screenshots and steps to prove the vuln exist and also to make it obvious how to check for the vuln
+		- Remediation: How to fix the vuln
+			- Provide multiple options to remediate if possible - with tradeoffs explained
+		- Additional links: Info about the vuln including CVE, exploit guides, open source code, and walkthroughs from detection and remediation
+
+
+- Appendix
+	- Methodologies
+	- Tools used (including permalinks to specific github commit)
+
+
+- In a retest:
+	- Incude a table that shows which vulns have been remediated
+	- Even if smth has been remediated, still include remediation details
+
+
+### Things to do if you don't wanna look bad
+
+- Order should be: Intro -> Executive Summary (incl. Conclusion)
+
+- Make sure finding blocks are easily formatted w/ sections
+
+- Stay away from speculating about a vulnerability. Everything should have evidence
+
