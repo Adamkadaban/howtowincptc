@@ -15,7 +15,7 @@
 		* [Insecure Direct Object References (IDOR)](pentesting/web/IDOR.md)
 		* [SQL Injection (SQLi)](pentesting/web/SQLi.md)
 		* [Command Injection](pentesting/web/CommandInjection.md)
-		* [Cross-Site Scripting (XSS)]((pentesting/web/XSS.md))
+		* [Cross-Site Scripting (XSS)]((pentesting/web/XSS.md)
 		* [Server-Side Template Injection (SSTI)](pentesting/web/SSTI.md)
 		* [Directory Traversal](pentesting/web/DirectoryTraversal.md)
 		* [Local File Inclusion (LFI)](pentesting/web/LFI.md)
