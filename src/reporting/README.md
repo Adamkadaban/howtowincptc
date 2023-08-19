@@ -81,6 +81,7 @@ I've almost entirely based this section on the [BHIS Pentest Reporting course by
 
 - Tools like [PlexTrac](https://plextrac.com/) can make reporting, especially when collaborative, much easier, but are very expensive.
 	- [pwndoc](https://github.com/pwndoc/pwndoc) is a great open-source alternative that works similarly to generate a word document based on findings. 
+	- [Ghostwriter](https://github.com/GhostManager/Ghostwriter) by SpecterOps is another fantastic open-source tool that works just as well.
 
 ## How to Write a Good Report for CPTC
 
