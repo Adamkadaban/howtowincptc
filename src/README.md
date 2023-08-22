@@ -23,3 +23,9 @@ Every year, a new theme is chosen along with a fictional organization that will 
 There are a ton of resources for learning. My favorite is [TryHackMe](https://tryhackme.com/signup?referrer=5faa1fec93143b7c608061fa), which is a cyberrange that plenty of rooms that will walk you through the entire process of an excercise and has more that will challenge you to do it on your own.
 * For a more complete list of resources, I have a list on my GitHub: https://github.com/Adamkadaban/CTFs#resources
 
+# How to Practice for CPTC
+
+Of course, cyberranges like [HackTheBox](https://www.hackthebox.com/), [TryHackMe](https://tryhackme.com/hacktivities), and [VulnHub](https://www.vulnhub.com/) are great for general practice and will build on your skills well. 
+
+However, if you and your team want more CPTC-specific practice, the CPTC VM images are available online:
+http://cptc.rit.edu/
