@@ -21,7 +21,7 @@ Every year, a new theme is chosen along with a fictional organization that will 
 # How to Pentest
 
 There are a ton of resources for learning. My favorite is [TryHackMe](https://tryhackme.com/signup?referrer=5faa1fec93143b7c608061fa), which is a cyberrange that plenty of rooms that will walk you through the entire process of an excercise and has more that will challenge you to do it on your own.
-* For a more complete list of resources, I have one on my GitHub: https://github.com/Adamkadaban/CTFs#resources
+* For a more complete list of resources, take a look at the one on my GitHub: https://github.com/Adamkadaban/CTFs#resources
 
 # How to Practice for CPTC
 
