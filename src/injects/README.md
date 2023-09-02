@@ -7,7 +7,7 @@ For example:
 * Respond to an email asking about relevant compliance standards
 * Explain to the client how to make passwords better
 * Weigh in on if the client should incorporate MFA
-* Make a social engineering phone call (https://www.youtube.com/watch?v=UmhzcebVkkM&ab_channel=GlobalCPTC)
+* Make a social engineering phone call ([This happened!](https://www.youtube.com/watch?v=UmhzcebVkkM&ab_channel=GlobalCPTC))
 * Make a phishing site for harvesting credentials
 * Create a network diagram
 
