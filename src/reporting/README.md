@@ -36,7 +36,7 @@ I've almost entirely based this section on the [BHIS Pentest Reporting course by
 	- Annotate screenshots with numbers, boxes, arrows (use flameshot)
 		- Get a standard color used between everyone writing the report. This will make it look more professional.
 		- All credentials (yes, even hashes) should be redacted.
-		- Try to make sure everything in the screenshot is relevent and everything that is relevent is in the screenshot. 
+		- Try to make sure everything in the screenshot is relevant and everything that is relevant is in the screenshot. 
 	- Be specific about every finding.
 		- Explain exactly which resources under which permissions are vulnerable to what. 
 		- If you know something is true, explain how you know that it is true.
@@ -72,9 +72,9 @@ I've almost entirely based this section on the [BHIS Pentest Reporting course by
 
 - BHIS suggests using word as, even though it's annoying, it's the best in terms of macros + styles + sections + custom dictionary + spellcheck. 
 
-- With word you can have people work in seperate documents and then `Insert > Object > Text` to insert other word docs into your main report doc.
+- With word you can have people work in separate documents and then `Insert > Object > Text` to insert other word docs into your main report doc.
 
-- You can also use spellcheck as a way to quickly type big block of texts (shorcuts basically).
+- You can also use spellcheck as a way to quickly type big block of texts (shortcuts basically).
 
 - Tools like LaTeX can also be used if you want more granular control of your template, but can make reporting a lot slower.
 	- Some clients may also specifically request a Word doc.
@@ -140,7 +140,7 @@ Thus, the majority of this section will be based on various posts on [Dan Borges
 
 
 - In a retest:
-	- Incude a table that shows which vulns have been remediated
+	- Include a table that shows which vulns have been remediated
 	- Even if smth has been remediated, still include remediation details
 
 
