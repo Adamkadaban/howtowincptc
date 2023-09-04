@@ -26,6 +26,8 @@ I've almost entirely based this section on the [BHIS Pentest Reporting course by
 
 - Do not say "includes but is not limited to" or similar. Make sure that your lists, especially when detailing vulns and inventory, are complete. 
 
+- Report should indicate that it is confidential (or whatever other labeling term the company uses)
+
 ### Report Elements
 
 - Include evidence of **all** findings
