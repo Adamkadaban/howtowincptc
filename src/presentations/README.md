@@ -23,6 +23,8 @@ This section is primarily based on [this](http://lockboxx.blogspot.com/2021/01/c
 
 * Dress appropriately for the audience. 
 
+* ["Keep eye contact"](https://sourque.com/blog/cptc/)
+
 * Talk about issues in the retest as well as things that have been remediated successfully by the company.
 
 * Most of the presentation should be about the key findings and suggested remediations
