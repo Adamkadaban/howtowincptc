@@ -4,7 +4,7 @@ Notes, Comments, and Commands on How to Win CPTC
 
 Live Link: [https://howtowincptc.com](https://howtowincptc.com)
 
-Please report incorrect information or broken links via the GitHub Issues.
+Please report incorrect information or broken links via GitHub Issues.
 
 Feel free to contribute!
 
