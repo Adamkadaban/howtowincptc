@@ -2,7 +2,9 @@
 How to win CPTC! Based on [howtowinccdc](https://howtowinccdc.com/)
 
 
-This is a WIP project that was started in August of 2023
+This is a WIP project that is a culmination of my own notes as well as all of the blogs and resources I've found online about CPTC. 
+
+This project was started in August of 2023
 
 ---
 
