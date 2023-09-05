@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](introduction/README.md)
+* [Introduction](README.md)
 * [Reporting](reporting/README.md)
 * [Pentesting](pentesting/README.md)
 	* [OSINT](pentesting/osint/README.md)
