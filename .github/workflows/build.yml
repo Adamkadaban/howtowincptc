@@ -7,7 +7,7 @@ jobs:
   build-and-publish:
     runs-on: ubuntu-latest
     env:
-      USER_NAME : adamkadaban
+      USER_NAME: adamkadaban
       USER_EMAIL: adamkadaban@gmail.com
     steps:
       - uses: actions/checkout@v3
