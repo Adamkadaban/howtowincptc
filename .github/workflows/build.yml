@@ -22,5 +22,7 @@ jobs:
           gitbook build ./src --output=. ./docs
       - run:
           echo "howtowincptc.com" > ./docs/CNAME
+      - run:
+          cp ./.extras/sitemap.xml ./docs/
       - name: Build
         uses: bob1113/gitbook-publish@v1.0.0
