@@ -24,5 +24,7 @@ jobs:
           echo "howtowincptc.com" > ./docs/CNAME
       - run:
           cp ./.extras/sitemap.xml ./docs/
+      - run:
+          cp ./.extras/robots.txt ./docs/
       - name: Build
         uses: bob1113/gitbook-publish@v1.0.0
