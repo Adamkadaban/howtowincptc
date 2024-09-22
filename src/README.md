@@ -1,5 +1,5 @@
 # Introduction
-How to win CPTC! Based on [howtowinccdc](https://howtowinccdc.com/)
+How to win CPTC! Based on [howtowinccdc](https://howtowinccdc.com/wiki/)
 
 
 This is a WIP project that is a culmination of my own notes as well as all of the blogs and resources I've found online about CPTC. 
