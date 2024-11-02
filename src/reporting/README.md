@@ -126,7 +126,7 @@ Thus, the majority of this section will be based on various posts on [Dan Borges
 			- Reference known CVEs and vulns
 			- It can be useful to have pre-written vuln descriptions
 		- Impact: Impact on the client in this environment specifically
-		- Likelihood: Change of an attack
+		- Likelihood: Chance of an attack
 			- Optional
 			- Include elements of cvss score, complexity of attack, if there are available tools to make the attack easy
 			- This can be part of impact
