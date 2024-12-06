@@ -1,6 +1,6 @@
 # Educational Events
 
-This section seems to only be scored in the final round and essentially involves scoring a team's ability to be responsible when pentesting.
+This section seems to primarily be scored in the final round and essentially involves scoring a team's ability to be responsible when pentesting.
 
 When pentesting for CPTC, you can't treat the network like any random HackTheBox. This means no changing a user's password, no brute-forcing, no exfiltrating sensitive data, etc.
 
