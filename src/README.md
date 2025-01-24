@@ -1,10 +1,7 @@
 # Introduction
 How to win CPTC! Based on [howtowinccdc](https://howtowinccdc.com/wiki/)
 
-
-This is a WIP project that is a culmination of my own notes as well as all of the blogs and resources I've found online about CPTC. 
-
-This project was started in August of 2023
+Please feel free to contribute on [GitHub](https://github.com/adamkadaban/howtowincptc)!
 
 ---
 
