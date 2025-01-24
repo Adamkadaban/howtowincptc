@@ -1,6 +1,8 @@
 # Introduction
 How to win CPTC! Based on [howtowinccdc](https://howtowinccdc.com/wiki/)
 
+None of this is official advice and is entirely based on what I've heard as a competitor or on what I've read online. 
+
 Please feel free to contribute on [GitHub](https://github.com/adamkadaban/howtowincptc)!
 
 ---
