@@ -13,3 +13,6 @@ Here are some things that have been scored (as negative points) in the past:
 **Some things to keep in mind:**
 - If you make a mistake, own up to it ASAP.
 - When you are told about a mistake, make sure to react appropriately and professionally. 
+
+
+It seems that if you respond appropriately to a mistake, you can earn back up to 95% of the points you would have lost.
