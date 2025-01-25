@@ -9,7 +9,9 @@ For example:
 * Weigh in on if the client should incorporate MFA
 * Make a social engineering phone call ([This happened!](https://www.youtube.com/watch?v=UmhzcebVkkM&ab_channel=GlobalCPTC))
 * Make a phishing site for harvesting credentials
+* Send phishing mail via an exe or maldoc
 * Create a network diagram
+* Leak secrets from an LLM
 
 It is also possible to have injects that involve physical attacks like that of lockpicking.
 
