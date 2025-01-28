@@ -18,3 +18,5 @@ The Collegiate Penetration Testing Competition (CPTC) is an event in which teams
 1. Giving a [presentation](presentations/README.md) (if you attend finals)
 
 Every year, a new theme is chosen along with a fictional organization that will be pentested. 
+
+If you'd like to hear about CPTC from other people, check out the [blogs](blogs/README.md) page!
