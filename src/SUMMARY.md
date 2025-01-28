@@ -7,3 +7,4 @@
 * [Injects](injects/README.md)
 	* [Educational Events](injects/educational-events/README.md)
 * [Presentations](presentations/README.md)
+* [Blogs](blogs/README.md)
