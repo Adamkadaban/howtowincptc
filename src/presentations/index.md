@@ -5,9 +5,9 @@ These presentations are 10 minutes and all members are required to speak.
 
 ## Example Presentations
 
-Global CPTC has a few years of examples of presentations made by the final teams: https://github.com/globalcptc/report_examples
+Global CPTC has a few years of examples of presentations made by the final teams: [globalcptc/report_examples](https://github.com/globalcptc/report_examples)
 
-There are also several videos of these presentations on their YouTube channel: https://www.youtube.com/@globalcptc/videos
+There are also several videos of these presentations on their [YouTube channel](https://www.youtube.com/@globalcptc/videos)
 
 These are excellent places to look if you want to get an idea of what the best teams do.
 
