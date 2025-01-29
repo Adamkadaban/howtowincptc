@@ -4,27 +4,36 @@ on:
     branches:
       - main
 jobs:
-  build-and-publish:
+  docs:
+    concurrency: ci-${{ github.ref }}
+    name: Build and deploy documentation
     runs-on: ubuntu-latest
-    env:
-      USER_NAME: adamkadaban
-      USER_EMAIL: adamkadaban@gmail.com
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v2
+      - uses: actions-rs/toolchain@v1
         with:
-          node-version: '10.22.0'
-      - run:
-          npm install gitbook-cli -g
-      - run:
-          gitbook install ./src
-      - run:
-          gitbook build ./src --output=. ./docs
-      - run:
-          echo "howtowincptc.com" > ./docs/CNAME
-      - run:
-          cp ./.extras/sitemap.xml ./docs/
-      - run:
-          cp ./.extras/robots.txt ./docs/
-      - name: Build
-        uses: bob1113/gitbook-publish@v1.0.0
+          toolchain: stable
+      - name: Install static-sitemap-cli
+        run: npm install static-sitemap-cli
+      - name: Install mdbook
+        uses: baptiste0928/cargo-install@v1
+        with:
+          crate: mdbook
+          version: 0.4
+      - name: Install mdbook link checker
+        uses: baptiste0928/cargo-install@v1
+        with:
+          crate: mdbook-linkcheck
+      - name: Build book
+        run: |
+          mdbook build
+      - name: Generate sitemap
+        run: |
+          cd book
+          npx sscli --no-clean --base https://howtowincptc.com
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v4
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          folder: book
