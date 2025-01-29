@@ -1,0 +1,21 @@
+[book]
+authors = ["Adamkadaban"]
+language = "en"
+multilingual = false
+src = "src"
+title = "howtowincptc"
+
+[output.linkcheck]
+
+# Make sure web links still exist
+follow-web-links = true
+
+traverse-parent-directories = false
+
+# Fail if links do not exist
+warning-policy = "error"
+
+user-agent = "how-to-win-cptc-linkcheck-0.0.1"
+
+# Ignore THM to avoid cloudflare problems
+exclude = [ 'tryhackme\.com' ]

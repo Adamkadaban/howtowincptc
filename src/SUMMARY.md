@@ -1,10 +1,10 @@
 # Summary
 
-* [Introduction](README.md)
-* [Reporting](reporting/README.md)
-* [Pentesting](pentesting/README.md)
-	* [OSINT](pentesting/osint/README.md)
-* [Injects](injects/README.md)
-	* [Educational Events](injects/educational-events/README.md)
-* [Presentations](presentations/README.md)
-* [Blogs](blogs/README.md)
+* [Introduction](index.md)
+* [Reporting](reporting/index.md)
+* [Pentesting](pentesting/index.md)
+	* [OSINT](pentesting/osint/index.md)
+* [Injects](injects/index.md)
+	* [Educational Events](injects/educational-events/index.md)
+* [Presentations](presentations/index.md)
+* [Blogs](blogs/index.md)
