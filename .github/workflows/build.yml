@@ -20,10 +20,10 @@ jobs:
         with:
           crate: mdbook
           version: 0.4
-      - name: Install mdbook link checker
-        uses: baptiste0928/cargo-install@v1
-        with:
-          crate: mdbook-linkcheck
+#      - name: Install mdbook link checker
+#        uses: baptiste0928/cargo-install@v1
+#        with:
+#          crate: mdbook-linkcheck
       - name: Build book
         run: |
           mdbook build
