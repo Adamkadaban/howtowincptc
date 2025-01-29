@@ -29,6 +29,7 @@ jobs:
           mdbook build
       - name: Generate sitemap
         run: |
+          cp CNAME robots.txt book
           cd book
           npx sscli --no-clean --base https://howtowincptc.com
       - name: Deploy
