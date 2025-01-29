@@ -1,0 +1,464 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Reporting - howtowincptc</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">howtowincptc</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="reporting"><a class="header" href="#reporting">Reporting</a></h1>
+<p>Before and after figuring out what you want in your report, I highly recommend looking at <a href="https://github.com/juliocesarfort/public-pentesting-reports">these</a> public reports to get inspiration for formatting and findings.</p>
+<h2 id="how-to-write-a-good-report"><a class="header" href="#how-to-write-a-good-report">How to Write a Good Report</a></h2>
+<p>This section will cover general reporting tips that will help you write an outstanding report.</p>
+<p>I've almost entirely based this section on the <a href="https://www.youtube.com/watch?v=rM-MVSe4MiA&amp;ab_channel=BlackHillsInformationSecurity">BHIS Pentest Reporting course by BB King</a> that is also available as a <a href="https://www.antisyphontraining.com/pay-what-you-can/">pay what you can course from Antisyphon Training</a>.</p>
+<h3 id="general-tips"><a class="header" href="#general-tips">General Tips</a></h3>
+<ul>
+<li>
+<p>Reporting should be done alongside the testing</p>
+<ul>
+<li><strong>RAYG: Report as you go.</strong></li>
+<li>This will make it easier to ensure your report is complete and that you won't forget anything when you do the report.</li>
+</ul>
+</li>
+<li>
+<p>It can be helpful to create a pre-written database of findings that you can use and modify during a pentest.</p>
+<ul>
+<li>Many top firms do this to save time. It will make it easier to RAYG and will let your team refine findings over time.</li>
+</ul>
+</li>
+<li>
+<p>Keep a checklist as a reminder of what you need to get done in your report.</p>
+</li>
+<li>
+<p>You want to include what attacks did not work in a report.</p>
+<ul>
+<li>That way, the company you're testing knows what you didn't test (what needs further testing) and they know what they're doing well.</li>
+</ul>
+</li>
+<li>
+<p>Do not say "includes but is not limited to" or similar. Make sure that your lists, especially when detailing vulns and inventory, are complete.</p>
+</li>
+<li>
+<p>Report should indicate that it is confidential (or whatever other labeling term the company uses)</p>
+</li>
+</ul>
+<h3 id="report-elements"><a class="header" href="#report-elements">Report Elements</a></h3>
+<ul>
+<li>
+<p>Include evidence of <strong>all</strong> findings</p>
+<ul>
+<li>The evidence should make it not only easy to understand, but also hard to misunderstand.
+<ul>
+<li>The best way to do this is with screenshots.</li>
+<li>Note that ambiguity is hard to avoid:
+<ul>
+<li>eg. If you type <code>whoami</code> to show root, that doesn't necessarily prove root, as it could only have euid of 0. Type <code>root; id</code> to prove that you are root.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Annotate screenshots with numbers, boxes, arrows (use flameshot)
+<ul>
+<li>Get a standard color used between everyone writing the report. This will make it look more professional.</li>
+<li>All credentials (yes, even hashes) should be redacted.</li>
+<li>Try to make sure everything in the screenshot is relevant and everything that is relevant is in the screenshot.</li>
+</ul>
+</li>
+<li>Be specific about every finding.
+<ul>
+<li>Explain exactly which resources under which permissions are vulnerable to what.</li>
+<li>If you know something is true, explain how you know that it is true.
+<ul>
+<li>eg. instead of saying "this server is old", say "the http response header indicates that the server is old"</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Every finding must have a context behind it.</p>
+<ul>
+<li>How does this finding relate to the org?</li>
+</ul>
+</li>
+<li>
+<p>Every finding needs to have a business impact. Will this fix require a lot of overhead? Will it cost a lot? Explain why a fix is necessary if it is.</p>
+</li>
+<li>
+<p>Reports (especially the findings) are generally read by security people.</p>
+<ul>
+<li>Explain how problems are found so findings can be recreated.</li>
+<li>This is crucial! If an org is trying to remediate the findings on their own, they have to know exactly how to check if the issues were fixed. It will also make a retest easier for you or any other testers in the future.</li>
+</ul>
+</li>
+<li>
+<p>For recommendations, include why they are so and who recommended them (links are preferable).</p>
+</li>
+</ul>
+<h3 id="visual-elements"><a class="header" href="#visual-elements">Visual Elements</a></h3>
+<ul>
+<li>
+<p>Ensure that fonts and colors are consistent. Font size in images should be similar of the font size that is used in the report.</p>
+</li>
+<li>
+<p>Preferably, screenshots will look consistent in terms of size, color, font, etc.</p>
+</li>
+</ul>
+<h3 id="tone"><a class="header" href="#tone">Tone</a></h3>
+<ul>
+<li>
+<p>In general, dismissive words like "simply", "small", "quickly" can make someone reading a report feel as if it is unimportant.</p>
+<ul>
+<li>Reports that are more negative are less likely to get the company rehired to do a retest.</li>
+<li>People may ignore any advice given when it is given with a tone that suggests the reporter feels superior to the person it is being read by.</li>
+</ul>
+</li>
+<li>
+<p>Do not brag. This can make the customer unhappy + prevent them from wanting to rehire you. Your skills should be proven by your report quality.</p>
+</li>
+</ul>
+<h3 id="how-to-generate-reports"><a class="header" href="#how-to-generate-reports">How to Generate Reports</a></h3>
+<ul>
+<li>
+<p>BHIS suggests using word as, even though it's annoying, it's the best in terms of macros + styles + sections + custom dictionary + spellcheck.</p>
+</li>
+<li>
+<p>With word you can have people work in separate documents and then <code>Insert &gt; Object &gt; Text</code> to insert other word docs into your main report doc.</p>
+</li>
+<li>
+<p>You can also use spellcheck as a way to quickly type big block of texts (shortcuts basically).</p>
+</li>
+<li>
+<p>Tools like LaTeX can also be used if you want more granular control of your template, but can make reporting a lot slower.</p>
+<ul>
+<li>Some clients may also specifically request a Word doc.</li>
+</ul>
+</li>
+<li>
+<p>Tools like <a href="https://plextrac.com/">PlexTrac</a> can make reporting, especially when collaborative, much easier, but are very expensive.</p>
+<ul>
+<li><a href="https://github.com/pwndoc/pwndoc">pwndoc</a> is a great open-source alternative that works similarly to generate a word document based on findings.</li>
+<li><a href="https://github.com/GhostManager/Ghostwriter">Ghostwriter</a> by SpecterOps is another fantastic open-source tool that works just as well.</li>
+<li><a href="https://github.com/Syslifters/sysreptor">SysReporter</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="how-to-write-a-good-report-for-cptc"><a class="header" href="#how-to-write-a-good-report-for-cptc">How to Write a Good Report for CPTC</a></h2>
+<p>Writing a good report for CPTC should be about the same as writing a general report.</p>
+<p>However, Dan Borges (Scoring), has written several blogs on what he believes to be critical in a pentest, which especially motivated teams may want to know to have a slight leg up on the other competition.</p>
+<p>Thus, the majority of this section will be based on various posts on <a href="http://lockboxx.blogspot.com/">Dan Borges' Blog</a></p>
+<h3 id="things-to-do"><a class="header" href="#things-to-do">Things to Do</a></h3>
+<ul>
+<li>
+<p>Clear TOC</p>
+</li>
+<li>
+<p>Executive Summary</p>
+<ul>
+<li>Scope
+<ul>
+<li>Include a network topology below the scope</li>
+</ul>
+</li>
+<li>Overall Risk Summary</li>
+<li>Summary of major Issues</li>
+<li>Brief Narrative of test</li>
+<li>High level remediation advice
+<ul>
+<li>Provide short and long-term advice</li>
+</ul>
+</li>
+<li>Successful security controls
+<ul>
+<li>Optional, but shows the client they're doing some things right</li>
+</ul>
+</li>
+<li>Compliance findings and guidance
+<ul>
+<li>If there is an MOU or SLA, describe if they are met as per the environment.</li>
+</ul>
+</li>
+<li>Methodologies, approaches, risk rating systems
+<ul>
+<li>Probably makes more sense in the appendix</li>
+<li>This shows that there are standards being used. PTES is good bc it's standardized</li>
+<li>Include a diagram of the methodology</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Technical Findings</p>
+<ul>
+<li>Graphical summaries of findings at the top
+<ul>
+<li>Pie chart of vulns by criticality and category</li>
+</ul>
+</li>
+<li>Include the vuln, the systems vulnerable, the impact on the company, overall risk, detailed steps to test the vuln, suggested remediation, and links that may be useful
+<ul>
+<li>Risk: low, medium, high, critical, informational
+<ul>
+<li>Use CVSS</li>
+</ul>
+</li>
+<li>Scope: Items and systems impacted.
+<ul>
+<li>Can include assets, apps, paths in an app, systems in a process, services...</li>
+</ul>
+</li>
+<li>Description: Describe the vuln fully
+<ul>
+<li>Reference known CVEs and vulns</li>
+<li>It can be useful to have pre-written vuln descriptions</li>
+</ul>
+</li>
+<li>Impact: Impact on the client in this environment specifically</li>
+<li>Likelihood: Chance of an attack
+<ul>
+<li>Optional</li>
+<li>Include elements of cvss score, complexity of attack, if there are available tools to make the attack easy</li>
+<li>This can be part of impact</li>
+</ul>
+</li>
+<li>Steps to test: How the reader can verify the vuln
+<ul>
+<li>Include screenshots and steps to prove the vuln exist and also to make it obvious how to check for the vuln</li>
+</ul>
+</li>
+<li>Remediation: How to fix the vuln
+<ul>
+<li>Provide multiple options to remediate if possible - with tradeoffs explained</li>
+</ul>
+</li>
+<li>Additional links: Info about the vuln including CVE, exploit guides, open source code, and walkthroughs from detection and remediation</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Appendix</p>
+<ul>
+<li>Methodologies</li>
+<li>Tools used (including permalinks to specific github commit)</li>
+</ul>
+</li>
+<li>
+<p>In a retest:</p>
+<ul>
+<li>Include a table that shows which vulns have been remediated</li>
+<li>Even if smth has been remediated, still include remediation details</li>
+</ul>
+</li>
+</ul>
+<h3 id="things-to-do-if-you-dont-wanna-look-bad"><a class="header" href="#things-to-do-if-you-dont-wanna-look-bad">Things to do if you don't wanna look bad</a></h3>
+<ul>
+<li>
+<p>Order should be: Intro -&gt; Executive Summary (incl. Conclusion)</p>
+</li>
+<li>
+<p>Make sure finding blocks are easily formatted w/ sections</p>
+</li>
+<li>
+<p>Stay away from speculating about a vulnerability. Everything should have evidence</p>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../pentesting/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../pentesting/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
