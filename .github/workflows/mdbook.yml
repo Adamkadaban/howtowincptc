@@ -36,7 +36,7 @@ jobs:
         run: mdbook build
       - name: Generate sitemap
         run: |
-          cp CNAME robots.txt book
+          cp robots.txt book
           cd book
           npx sscli --no-clean --base https://howtowincptc.com
       - name: Upload artifact

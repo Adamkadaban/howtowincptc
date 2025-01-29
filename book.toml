@@ -10,4 +10,4 @@ title = "howtowincptc"
 git-repository-url = "https://github.com/adamkadaban/howtowincptc"
 git-repository-icon = "fa-github"
 edit-url-template = "https://github.com/adamkadaban/howtowincptc/edit/main/{path}"
-
+cname = "howtowincptc.com"
