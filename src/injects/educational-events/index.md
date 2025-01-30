@@ -9,6 +9,7 @@ Here are some things that have been scored (as negative points) in the past:
 - Brute-forcing accounts and causing account lockout
 - Sending an inappropriate phishing email
 - Overloading ICS or other systems to cause a denial of service
+- Pasting sensitive info into websites like ChatGPT (even static ones like cyberchef)
 
 **Some things to keep in mind:**
 - If you make a mistake, own up to it ASAP.
