@@ -9,14 +9,14 @@ Please feel free to contribute on [GitHub](https://github.com/adamkadaban/howtow
 
 # What is CPTC?
 
-See [here](https://cp.tc/overview) for an official description
+See the [official overview](https://cp.tc/overview) for a full description.
 
-The Collegiate Penetration Testing Competition (CPTC) is an event in which teams are hired to do a simulated penetration testing engagement that includes:
+The Collegiate Penetration Testing Competition (CPTC) is an event in which teams conduct a simulated penetration testing engagement that includes:
 1. [Pentesting](pentesting/index.html) a network
-1. Doing business [injects](injects/index.html)
+1. Completing business [injects](injects/index.html)
 1. Writing a [report](reporting/index.html)
-1. Giving a [presentation](presentations/index.html) (if you attend finals)
+1. Delivering a [presentation](presentations/index.html) (at finals)
 
-Every year, a new theme is chosen along with a fictional organization that will be pentested. 
+Every year, a new theme is chosen along with a fictional organization that will be pentested.
 
 If you'd like to hear about CPTC from other people, check out the [blogs](blogs/index.html) page!

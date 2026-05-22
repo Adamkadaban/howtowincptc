@@ -42,4 +42,3 @@ The following are things that most winning teams seem to include in their presen
 * A summary of all points at the end of the presentation
 * Leave around 2 minutes for questions at the end
 * Cite parts of the pentest (H.2 for 2nd High vuln) in the presentation)
-

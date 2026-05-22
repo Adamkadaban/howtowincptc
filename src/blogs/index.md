@@ -1,6 +1,6 @@
 # Blogs
 
-In order to centralize knowledge about the competition and to promote competitors and volunteers, this will serve as a record of blogposts from previous competitions
+To centralize knowledge about the competition and highlight contributions from competitors and volunteers, below is a collection of blog posts from previous competitions.
 
 | Event   | Author                                               | URL                                                                                                                                                                                                                 |
 | ------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
