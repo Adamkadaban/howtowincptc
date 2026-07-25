@@ -1,12 +1,14 @@
 [book]
 authors = ["Adamkadaban"]
+description = "A practical guide to the Collegiate Penetration Testing Competition (CPTC), covering preparation, pentesting, reporting, injects, and presentations."
 language = "en"
 multilingual = false
 src = "src"
-title = "howtowincptc"
+title = "How to Win CPTC"
 
 
 [output.html]
+additional-js = ["google-analytics.js"]
 git-repository-url = "https://github.com/adamkadaban/howtowincptc"
 git-repository-icon = "fa-github"
 edit-url-template = "https://github.com/adamkadaban/howtowincptc/edit/main/{path}"

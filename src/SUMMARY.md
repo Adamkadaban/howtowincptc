@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](index.md)
+* [Collegiate Penetration Testing Competition Guide](index.md)
 * [Reporting](reporting/index.md)
 * [Pentesting](pentesting/index.md)
 	* [OSINT](pentesting/osint/index.md)
