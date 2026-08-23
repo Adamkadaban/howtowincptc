@@ -8,3 +8,7 @@
 	* [Educational Events](injects/educational-events/index.md)
 * [Presentations](presentations/index.md)
 * [Blogs](blogs/index.md)
+
+---
+
+[Privacy](privacy.md)
