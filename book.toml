@@ -8,7 +8,7 @@ title = "How to Win CPTC"
 
 
 [output.html]
-additional-js = ["google-analytics.js"]
+additional-js = ["analytics.js"]
 git-repository-url = "https://github.com/adamkadaban/howtowincptc"
 git-repository-icon = "fa-github"
 edit-url-template = "https://github.com/adamkadaban/howtowincptc/edit/main/{path}"
