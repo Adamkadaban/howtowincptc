@@ -21,9 +21,8 @@ accept, so declining means no data is collected from your visit at all.
 ## The consent prompt
 
 The prompt only appears for visitors in regions that require it (the EU/EEA, the
-UK, and Switzerland). To decide that, a small
-[Cloudflare Worker](https://github.com/Adamkadaban/adamkadaban.github.io/blob/main/workers/geo-consent/worker.js)
-looks at the country your network connection resolves to and returns nothing but
+UK, and Switzerland). To decide that, a small Cloudflare Worker looks at the
+country your network connection resolves to and returns nothing but
 a yes/no. It is coarse (country only), sets no cookies, and stores or logs
 nothing - it is used solely to decide whether to show the prompt.
 
