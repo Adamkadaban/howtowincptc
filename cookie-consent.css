@@ -1,0 +1,81 @@
+/* Cookie consent prompt, styled with mdBook theme variables so it matches the
+   native theme-picker popup across light, rust, coal, navy, and ayu. */
+.cookie-consent {
+  position: fixed;
+  bottom: 1.15rem;
+  right: 1.15rem;
+  z-index: 1000;
+  max-width: 19rem;
+  padding: 0.8rem 1rem 0.85rem;
+  background: var(--theme-popup-bg);
+  color: var(--fg);
+  border: 1px solid var(--theme-popup-border);
+  border-radius: 5px;
+  box-shadow: 0 0.4rem 1.3rem rgba(0, 0, 0, 0.35);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(0.5rem);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.cookie-consent.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.cookie-consent-text {
+  margin: 0 0 0.7rem;
+}
+
+.cookie-consent-text a {
+  color: var(--links);
+}
+
+.cookie-consent-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.cookie-btn {
+  font: inherit;
+  font-size: 0.82rem;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.3rem 0.85rem;
+  border: 1px solid transparent;
+  background: none;
+  color: var(--fg);
+  opacity: 0.7;
+}
+
+.cookie-btn:hover {
+  opacity: 1;
+}
+
+.cookie-btn.cookie-accept {
+  background: var(--links);
+  color: var(--bg);
+  border-color: var(--links);
+  font-weight: 600;
+  opacity: 1;
+}
+
+.cookie-btn.cookie-accept:hover {
+  filter: brightness(1.1);
+}
+
+.cookie-btn:focus-visible {
+  outline: 2px solid var(--links);
+  outline-offset: 2px;
+}
+
+@media (max-width: 30em) {
+  .cookie-consent {
+    left: 1.15rem;
+    right: 1.15rem;
+    max-width: none;
+  }
+}

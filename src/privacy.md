@@ -1,19 +1,22 @@
 # Privacy
 
 This is the *How to Win CPTC* guide, maintained by Adam Hassan. In short: no
-tracking cookies, no ads, no accounts, and nothing sold or shared.
+ads, no accounts, nothing sold or shared, and analytics only run if you say yes.
 
 ## Cookies
 
-This site sets no cookies and does not track you.
+The only cookies this site sets are Google Analytics cookies, and only **after
+you accept** them in the prompt shown on your first visit. If you decline, no
+analytics cookies are set and nothing is loaded. There are no advertising cookies.
 
 ## Analytics
 
-It uses [Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/), a
-cookieless, privacy-first service. There are no cookies, no cross-site tracking,
-and only aggregated, non-identifying data such as page views, referrers, and
-approximate country. Your IP address is used only transiently to derive this and
-is not stored. See [Cloudflare's privacy policy](https://www.cloudflare.com/privacypolicy/).
+With your consent, this site uses [Google Analytics 4](https://marketingplatform.google.com/about/analytics/)
+to see which pages people read. IP anonymization is enabled, and the data is used
+only in aggregate (page views, referrers, approximate country, browser/device).
+Google processes this data as described in its
+[privacy policy](https://policies.google.com/privacy). Nothing loads until you
+accept, so declining means no data is collected from your visit at all.
 
 ## Hosting
 
@@ -21,10 +24,12 @@ The site is hosted on [GitHub Pages](https://pages.github.com/), which may
 process visitor IP addresses in server logs to deliver and protect it. See the
 [GitHub Privacy Statement](https://docs.github.com/site-policy/privacy-policies/github-privacy-statement).
 
-## Opting out
+## Your choice
 
-To exclude yourself from the aggregate analytics, add `?ga_optout=1` to any page
-URL on this site (`?ga_optout=0` undoes it).
+Analytics only runs if you accept, and you can change your mind whenever you
+like.
+
+<p id="cookie-choice"><a href="#" id="cookie-optout">Disable analytics on this site</a>.</p>
 
 ## Contact
 
