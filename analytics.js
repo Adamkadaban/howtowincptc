@@ -104,23 +104,34 @@
     if (choice === "granted") { loadAnalytics(); return; }
     if (choice === "denied") return;
 
-    // Prior consent is legally required for EU/EEA/UK visitors. Detect them by
-    // timezone - no server, no third-party geo-IP call. European-timezone
-    // visitors see the prompt; everyone else gets analytics without one.
-    var inEurope = false;
-    try {
-      var tz = (Intl.DateTimeFormat().resolvedOptions().timeZone || "");
-      inEurope = tz.indexOf("Europe/") === 0 ||
-        tz === "Atlantic/Canary" || tz === "Atlantic/Madeira" ||
-        tz === "Atlantic/Azores" || tz === "Atlantic/Reykjavik";
-    } catch (e) {}
-
-    if (!inEurope) {
-      try { localStorage.setItem("cookieConsent", "granted"); } catch (e) {}
-      loadAnalytics();
-      return;
+    // Ask the geo Worker whether this visitor is in a GDPR region (EU/EEA/UK/CH),
+    // by their real edge country. Country-level only, nothing stored. Non-GDPR
+    // visitors get analytics with no prompt; GDPR visitors (and any lookup
+    // failure, to stay safe) see the prompt. The result is cached per session.
+    var GEO_URL = "https://geo-consent.adamkadaban.workers.dev/";
+    var settled = false;
+    function decide(isEu) {
+      if (settled) return; settled = true;
+      try { sessionStorage.setItem("geoEu", isEu ? "true" : "false"); } catch (e) {}
+      if (isEu) {
+        buildPrompt();
+      } else {
+        try { localStorage.setItem("cookieConsent", "granted"); } catch (e) {}
+        loadAnalytics();
+      }
     }
-    buildPrompt(); // European visitor: prompt for consent
+
+    var cached = null;
+    try { cached = sessionStorage.getItem("geoEu"); } catch (e) {}
+    if (cached === "true" || cached === "false") { decide(cached === "true"); return; }
+
+    var timer = window.setTimeout(function () { decide(true); }, 3000);
+    try {
+      fetch(GEO_URL, { method: "GET", cache: "no-store" })
+        .then(function (r) { return r.json(); })
+        .then(function (d) { window.clearTimeout(timer); decide(!!(d && d.eu)); })
+        .catch(function () { window.clearTimeout(timer); decide(true); });
+    } catch (e) { window.clearTimeout(timer); decide(true); }
   }
 
   if (document.body) start();
